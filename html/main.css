@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,500;1,500&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root{
+    --yellow: #bf9a00;
+    --dark-color: #856b00;
+    --black: #444;
+    --light-color: #666;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: none;
+    width:  none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--black);
+}
+
+section{
+    padding: 5rem 9%;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: #bf9a00;
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: #856b00;
+}
+
+.header .header-1{
+    background-color: #fff;
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #bf9a00;
+} 
+
+.header .header-1 .logo i{
+    color: var(--yellow);
+}
+
+.header .header-1 .logo span{
+    color: #000
+}
+
+.header .header-1 .search-form{
+    width: 50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.header .header-1 .search-form input{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: #000;
+}
+
+.header .header-1 .search-form label{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.header .header-1 .search-form label:hover{
+    color: #bf9a00;
+}
+
+.header .header-1 .icons div,
+.header .header-1  .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1  .icons a:hover{
+    color: #bf9a00;
+}
+
+#search-btn{
+    display: none;
+}
+
+.header .header-2{
+    background: #bf9a00;
+}
+
+.header .header-2 .navy{
+    text-align: center;
+}
+
+.header .header-2 .navy a{
+    color: #fff;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.75rem;
+}
+
+.header .header-2 .navy a:hover{
+    background: #856b00;
+}
+
+.header .header-2.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.bottom-navy{
+    text-align: center;
+    background: #bf9a00;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.bottom-navy a{
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: #fff;
+}
+
+.bottom-navy a:hover{
+    background-color: #856b00;
+}
+
+.login-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, .9);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+
+.login-form-container.active{
+    right: 0;
+}
+
+.login-form-container form{
+    background: #fff;
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: .5rem;
+    margin: 2rem;
+}
+
+.login-form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+}
+
+.login-form-container form span{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.login-form-container form .box{
+    width: 100%;
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border:var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    color: #000;
+    text-transform: none;
+}
+
+.login-form-container form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+
+.login-form-container form .checkbox label{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.login-form-container form .btn{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.login-form-container form p{
+    padding-top: .8rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+.login-form-container form p a{
+    color: #bf9a00;
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: #000;
+    cursor: pointer;
+}
+/*------Home Section Starts ------*/
+
+.home{
+    background: url(./images/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .row .content{
+    flex: 1 1 42rem;
+}
+
+.img{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(590px, #bf9a00, transparent 40%);
+    margin-top: 35px;
+}
+
+.kdl-icon{
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 82%;
+}
+
+.social-icons{
+    height: 100%;
+    animation: rotation 60s linear infinite;
+}
+/*
+@keyframes rotation {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+*/
+
+.social-icons img{
+    position: absolute;
+}
+
+.social-icons img:nth-child(1){
+    top: 0;
+    left: 42%;
+
+}
+
+.social-icons img:nth-child(2){
+    top: 25%;
+    right: 0;
+}
+
+.social-icons img:nth-child(3){
+    top: 70%;
+    left: 70%;
+}
+
+.social-icons img:nth-child(4){
+    top: 25%;
+    left: 0;
+}
+
+.social-icons img:nth-child(5){
+    top: 70%;
+    left: 10%;
+}
+
+/*----Provide Section Start ----*/
+.provide{
+    background-color: #e5e5e5;
+}
+.provide .rap{
+    width: 80%;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 85px;
+}
+.provide h1{
+    font-family: 'Anton' sans-serif;
+    color:#bf9a00;
+    font-size: 4em;
+    font-weight: 300;
+    padding: 20px;
+}
+
+.single-box h1 span{
+    color: #d3a625;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+
+.single-box .cup{
+    padding: 10% 0;
+}
+
+.single-box .cup h2{
+    margin: 14px 0;
+    font-family: 'Barlow' sans-serif ;
+    font-size: 30px;
+}
+
+.single-box .cup p{
+    width: 85%;
+    margin: auto;
+    font-family: nunito;
+    font-size: 15px;
+}
+
+.single-box .cup a{
+    text-decoration: none;
+    background: #bf9a00;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'Nunito';
+    letter-spacing: .5px;
+}
+
+.single-box .cup .demo{
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.single-box .cup .demo i{
+    color: #ffff;
+    line-height: 80px;
+    font-size: 25px;
+}
+
+.single-box{
+    width: 400px;
+    height: 400px;
+    margin: 0 15px;
+    transition: .7s;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/packing.jpeg);
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;  
+}
+
+.single-box:nth-child(2){
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/black.jpg);
+    text-align: center;
+}
+
+.single-box:nth-child(3){
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/warehouseone.jpeg);
+    text-align: center;
+}
+
+.single-box:nth-child(4){
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/printing.jpeg);
+    text-align: center;
+}
+
+.single-box:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+/*----Graphic Section Starts ----*/
+
+.graphic{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/negative-space-asphalt-highway.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+.graphic .artwork img{
+    max-width: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;  
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 3rem 2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+
+    .header .header-2{
+        display: none;
+    }
+
+    .bottom-navy{
+        display: block;
+    }
+
+    #search-btn{
+        display: inline-block;
+    }
+
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%;
+        right: 2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;  
+    }
+
+}
+
+

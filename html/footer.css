@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,500;1,500&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-size: cover;
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.btn{
+    margin-top: 1rem;
+    padding: 0.6rem 1.8rem;
+    background-color: #bf9a00;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer .content{
+    width: 100%;
+    background-image: linear-gradient(135deg, #d3a625, #555555, #111111 74%);
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+
+ footer .content p,a{
+     color: #fff;
+     padding: 10px;
+     font-weight: 500;
+ }
+
+ footer .content .brand{
+     width: 33%;
+ }
+
+ footer .content .topic{
+     font-size: 22px;
+     font-weight: 600;
+     color:#111111;
+     margin-bottom: 16px;
+ }
+
+
+ footer .content .lower .topic{
+    margin: 24px 0 5px 0;
+ }
+
+ footer .content .lower i{
+     padding-right: 18px;
+ }
+
+ footer .content .middle{
+     padding-left: 80px;
+     color: #fff;
+ }
+
+ footer .content .middle a{
+     line-height: 32px;
+ }
+
+ footer .content .right input[type="text"]{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: #111111;
+    background: #fff;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 2px solid #222222;
+    text-align: center;
+}
+
+footer .content .right input[type="submit"]{
+    height: 42px;
+    width: 100%;
+    font-size: 18px;
+    color: #111111;
+    background: #bf9a00;
+    outline none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid #d3a625;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .content .right input[type="submit"]:hover{
+    background: none;
+    color: #555;
+    border: #555;
+}
+
+footer .content .media-icons a{
+    font-size: 16px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    background: #630A10;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+    border: 2px solid #22222;
+    margin: 30px 5px 0 0;
+    transition: all 0.3s ease
+}
+
+footer .content .media-icons a:hover{
+    border-color: #fff;
+}
+
+footer .bottom{
+    width: 100%;
+    text-align: right;
+    padding: 0 40px 5px 0;
+}
+
+footer .bottom a{
+    color: #bf9a00;
+}
+
+footer a:hover{
+    color: #111111;
+}
+
+footer .googlemap{
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.map-wrapper{
+    
+    border: 2px solid #111111;
+}
