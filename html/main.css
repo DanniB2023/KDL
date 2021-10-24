@@ -22,7 +22,7 @@
     text-transform: capitalize;
     transition: all .2s linear;
     transition: none;
-    width:  none;
+    width: none;
 }
 
 html{
@@ -46,6 +46,32 @@ html::-webkit-scrollbar-thumb{
 
 section{
     padding: 5rem 9%;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.heading::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: .01rem;
+    background: rgba(0, 0, 0, .1);
+    z-index: -1;
+}
+
+.heading span{
+    font-size: 3rem;
+    padding: .5rem 2rem;
+    color: var(--black);
+    background-color:#e5e5e5;
+    border: var(--border);
 }
 
 .btn{
@@ -290,7 +316,27 @@ section{
     flex: 1 1 42rem;
 }
 
-.img{
+.home .row .img{
+    flex: 1 1 42em;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.home .row .content h3{
+    color: #000;
+    font-size: 5.5rem;
+    text-transform: uppercase;
+}
+
+.home .row .content p{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 1rem 0;
+    
+}
+
+.home .row .img{
     position: relative;
     width: 500px;
     height: 500px;
@@ -298,7 +344,7 @@ section{
     margin-top: 35px;
 }
 
-.kdl-icon{
+.home .row .img .kdl-icon{
     position: absolute;
     top: 55%;
     left: 55%;
@@ -306,7 +352,7 @@ section{
     width: 82%;
 }
 
-.social-icons{
+.home .row .img .social-icons{
     height: 100%;
     animation: rotation 60s linear infinite;
 }
@@ -348,122 +394,220 @@ section{
     left: 10%;
 }
 
-/*----Provide Section Start ----*/
-.provide{
+/*----Icon Container Start-----*/
+
+.icons-container{
     background-color: #e5e5e5;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
 }
-.provide .rap{
-    width: 80%;
-    margin: 15px auto;
+
+.icons-container .icons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.icons-container .icons i{
+    font-size: 4.5rem;
+    color: #bf9a00;
+}
+
+.icons-container h3{
+    font-size: 1.7rem;
+    line-height: 1.3rem;
+}
+
+.icons-container .icons i h3{
+    font-size: 3.2rem;
+    color: #000;
+}
+
+.icons-container .icons p{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    margin-top: 6rem;
+    margin-left: -6rem;
+    text-align: center;
+}
+
+/*----Provide Section Start ----*/
+.provide .featured-slider .single-box {
+    background-color: #e5e5e5;
+    width: 25rem;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+    border: var(--border);
+    text-align: center;
+    
+}
+
+.provide .featured-slider .single-box:hover{
+    border: var(--border-hover);
+}
+
+.provide .featured-slider .single-box .cup{
+    padding: 1rem;
+    background: linear-gradient(15deg, #eee 38%, #fff 30.1%);
+}
+
+.provide .featured-slider .single-box .cup .content{
+    background-attachment: #eee;
+    padding: 1.5rem;
+}
+
+.provide .featured-slider .single-box .cup .content h3{
+    font-size: 2rem;
+    color: #000;
+}
+
+.provide .featured-slider .single-box .cup .content .words{
+    font-size: 2.2rem;
+    color: #000;
+    padding-top: 1rem;
+}
+
+.provide .featured-slider .single-box .cup .content .words span{
+    font-size:1.2rem;
+    color: var(--light-color)
+}
+
+.provide .featured-slider .single-box .cup img{
+    height: 25rem;
+}
+
+.provide .featured-slider .single-box .cup{
+    color: #000;
+    font-size: 2.2rem;
+    padding:1.3rem 1.5rem;
+}
+
+.provide .featured-slider .single-box a:hover{
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.provide .featured-slider .rap{
+    width: 100%;
+    margin: 20px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 85px;
-}
-.provide h1{
-    font-family: 'Anton' sans-serif;
-    color:#bf9a00;
-    font-size: 4em;
-    font-weight: 300;
-    padding: 20px;
+    margin-bottom: 55px;   
 }
 
-.single-box h1 span{
-    color: #d3a625;
-    font-weight: 700;
-    font-size: 1.5em;
-}
-
-
-.single-box .cup{
-    padding: 10% 0;
-}
-
-.single-box .cup h2{
-    margin: 14px 0;
-    font-family: 'Barlow' sans-serif ;
-    font-size: 30px;
-}
-
-.single-box .cup p{
-    width: 85%;
-    margin: auto;
-    font-family: nunito;
-    font-size: 15px;
-}
-
-.single-box .cup a{
-    text-decoration: none;
-    background: #bf9a00;
-    color: #fff;
-    padding: 10px 30px;
-    display: inline-block;
-    margin-top: 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-family: 'Nunito';
-    letter-spacing: .5px;
-}
-
-.single-box .cup .demo{
-    width: 90px;
-    height: 90px;
-    margin: auto;
-    border-radius: 50%;
-}
-
-.single-box .cup .demo i{
-    color: #ffff;
-    line-height: 80px;
-    font-size: 25px;
-}
-
-.single-box{
-    width: 400px;
-    height: 400px;
-    margin: 0 15px;
-    transition: .7s;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/packing.jpeg);
-    text-align: center;
-    color: #fff;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 5px;  
-}
-
-.single-box:nth-child(2){
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/black.jpg);
-    text-align: center;
-}
-
-.single-box:nth-child(3){
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/warehouseone.jpeg);
-    text-align: center;
-}
-
-.single-box:nth-child(4){
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/printing.jpeg);
-    text-align: center;
-}
-
-.single-box:hover{
+.provide .featured-slider .single-box:hover{
     transform: scale(1.2);
     z-index: 2;
+    transition: .7s;
+    border: none;
 }
 
 /*----Graphic Section Starts ----*/
 
 .graphic{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./images/negative-space-asphalt-highway.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.3)), url(./images/graphicmask.jpg);
     background-size: cover;
     background-position: center;
-    position: absolute;
+    position: relative;
+    
+}
+
+.graphic .artwork{
+    max-width: 55rem;
 }
 
 .graphic .artwork img{
     max-width: 100%;
+    margin-left: -30px;
+    margin-top: 20px;
     position: relative;
 }
+
+/*-----Mission Start------*/
+
+.mission{
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+}
+
+.mission .content{
+    flex:1 1 62rem;
+}
+
+.mission  .image{
+    flex: 1 25rem;
+}
+
+.mission  .image img{
+    width: 50%; 
+    margin-left: 65rem; 
+}
+
+.mission .content h3{
+    color: #bf9a00;
+    font-size: 3.5rem;
+    padding-bottom: .5rem;
+    
+}
+
+.mission .content h1{
+    color: #000;
+    font-size: 2.5rem;   
+}
+
+.mission .content p{
+    padding: 1em 0;
+    color: var(--light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+    margin-top: 2.5rem;
+    margin-right: 55rem;
+}
+
+
+
+
+
+
+/*-----Apply for Job Start------*/
+
+.job{
+    background: url(./images/jobhiringbanner.png) no-repeat;
+    background-size: cover;
+    background-position: cover;
+    position: relative;
+    
+}
+
+.job form{
+    max-width: 45rem;
+    margin-left: auto;
+    text-align: center;
+    padding: .5rem o;
+}
+
+.job form h1{
+    color: #000;
+    font-size: 2rem;
+    padding-bottom: .7rem;
+    font-weight: normal;  
+}
+
+.job form .btn{
+    text-align: center;
+}
+
+.job form .btn:hover{
+    background-color: var(--dark-color);
+
+}
+
 
 
 
@@ -492,6 +636,10 @@ section{
     section{
         padding: 3rem 2rem;
     }
+
+   
+
+
 
 }
 
@@ -533,6 +681,43 @@ section{
     .header .header-1 .search-form.active{
         top: 115%;
     }
+    .home .row .content{
+        text-align: center;
+    }
+
+    .home .row .content h3{
+        font-size: 3.5rem;
+    }
+
+    .home .row .img{
+        height: 350px;
+        background: radial-gradient(300px, #bf9a00, transparent 50%);
+        margin-top: 0px;
+    }
+
+    .home .row .img .social-icons{
+       display: none;
+    }
+
+    .home .row .img .kdl-icon{ 
+        top: 55%;
+        left: 55%;
+        width: 82%;
+    }
+
+    .icons-container {
+        display: none;
+    }
+
+    .provide .featured-slider{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+
+    
+   
+
 }
 
 @media (max-width:450px){
@@ -540,6 +725,27 @@ section{
     html{
         font-size: 50%;  
     }
+
+    .provide .featured-slider .rap{ 
+        
+        flex-direction: column;
+        flex: 2;
+
+        
+        margin: 35px auto;
+        
+        
+        justify-content: center;
+        margin-bottom: 55px
+
+        }
+
+        .job form{
+            display: none;
+        }
+
+        
+       
 
 }
 
