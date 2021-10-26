@@ -112,6 +112,10 @@ section{
     color: #000
 }
 
+.header .header-1 .logo{
+    background-image: url(./images/kdlone.png);
+}
+
 .header .header-1 .search-form{
     width: 50rem;
     height: 5rem;

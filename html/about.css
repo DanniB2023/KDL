@@ -63,7 +63,8 @@ html{
 
 .circle .circle-about p{
     font-size: 2rem;
-    color: var(--black); 
+    color: var(--light-color);
+    line-height: -1.0rem; 
 }
 
 .circle .circle-about .blue span{
