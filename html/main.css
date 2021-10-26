@@ -112,9 +112,6 @@ section{
     color: #000
 }
 
-.header .header-1 .logo{
-    background-image: url(./images/kdlone.png);
-}
 
 .header .header-1 .search-form{
     width: 50rem;
@@ -301,7 +298,7 @@ section{
     position: absolute;
     top: 1.5rem;
     right: 2.5rem;
-    font-size: 5rem;
+    font-size: 3rem;
     color: #000;
     cursor: pointer;
 }
@@ -1371,7 +1368,7 @@ img.medium{
 /*-----Apply for Job Start------*/
 
 .job{
-    background: url(./images/jobblue.png) no-repeat;
+    background:  url(./images/jobblue.png) no-repeat;
     background-size: cover;
     padding-bottom: 18.5rem;
     
@@ -1408,13 +1405,19 @@ img.medium{
 
 /*------Footer-------*/
 .footer{
-    background-color: #f3f3f3;
-    border-top: #bf9a00;
+  
+   /* background-image: url(./images/nav.jpg);*/
+    
+   background: rgb(229,229,229);
+   background: linear-gradient(180deg, rgba(229,229,229,0.8333177395209581) 0%, rgba(85,85,85,0.7943955838323353) 9%, rgba(5,5,5,1) 100%), url(./images/nav.jpg), no-repeat;
+   background-size: cover;
+   background-position: center center; 
+   /*border-top: #bf9a00;
     border-top-width: .5rem;
     border-style: solid;
     border-right: none;
     border-left: none;
-    border-bottom: none;
+    border-bottom: none;*/
 }
 
 
@@ -1426,7 +1429,7 @@ img.medium{
 
 .footer .box-container .boxer h3{
     font-size: 2.2rem;
-    color: var(--black);
+    color: #bf9a00;
     padding: 1rem 0;
 }
 
@@ -1436,19 +1439,19 @@ img.medium{
 
 .footer .box-container .boxer p{
     font-size: 1.5rem;
-    color: #bf9a00;
+    color: #e5e5e5;
     line-height: 3.5rem;  
 }
 
 .footer .box-container .boxer a{
     display: block;
-    font-size: 1.4rem;
-    color: var(--light-color);
+    font-size: 1.8rem;
+    color:#e5e5e5;
     padding: 1rem 0;
 }
 
 .footer .box-container .boxer a i{
-    color: var(--yellow);
+    color: #bf9a00;
     padding: .5rem;
 }
 
